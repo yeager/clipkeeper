@@ -31,6 +31,12 @@ A modern GTK4/Adwaita clipboard manager for Linux that keeps track of your clipb
 • Optional system tray indicator
 • Follow system dark/light theme
 
+**Secure Storage**
+• Clipboard history encrypted at rest (Fernet AES-128-CBC + HMAC)
+• Machine-derived encryption key via PBKDF2
+• File permissions restricted to owner only (0600)
+• Auto-migrates old plaintext history
+
 **GNOME Integration**
 • Beautiful Adwaita interface
 • Follows GNOME HIG guidelines
@@ -44,6 +50,7 @@ A modern GTK4/Adwaita clipboard manager for Linux that keeps track of your clipb
 • GTK 4.0
 • libadwaita 1.0
 • PyGObject
+• cryptography (recommended, for AES encryption)
 
 ### From Source
 

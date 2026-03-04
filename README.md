@@ -129,7 +129,7 @@ python3 clipkeeper.py
 Contributions are welcome! Please read our contributing guidelines and submit pull requests to the main repository.
 
 **Translation:**
-ClipKeeper uses gettext for internationalization. Translation files are managed through Transifex.
+ClipKeeper uses gettext for internationalization. Translations are managed on [Transifex](https://app.transifex.com/danielnylander/clipkeeper/). See [po/README.md](po/README.md) for details on how to contribute translations.
 
 ## License
 

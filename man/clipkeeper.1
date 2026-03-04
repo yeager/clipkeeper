@@ -1,0 +1,70 @@
+.TH CLIPKEEPER 1 "March 2025" "clipkeeper 0.1.0" "User Commands"
+.SH NAME
+clipkeeper \- GTK4 clipboard manager for Linux
+.SH SYNOPSIS
+.B clipkeeper
+[\fIOPTIONS\fR]
+.SH DESCRIPTION
+ClipKeeper is a modern clipboard manager built with GTK4 and libadwaita. 
+It provides a clean interface to manage your clipboard history with features
+like pinning important entries, searching, and keyboard shortcuts.
+.PP
+When run without options, clipkeeper launches the graphical user interface.
+.SH OPTIONS
+.TP
+.B \-\-version
+Show program version and exit.
+.TP
+.B \-\-clear
+Clear clipboard history (keeps pinned entries).
+.TP
+.B \-\-list
+List current clipboard history.
+.TP
+.B \-h, \-\-help
+Show help message and exit.
+.SH FEATURES
+.IP \[bu] 2
+Clean, modern GTK4/Adwaita interface
+.IP \[bu] 2
+Clipboard history with search
+.IP \[bu] 2
+Pin important entries
+.IP \[bu] 2
+Keyboard shortcuts
+.IP \[bu] 2
+Command-line interface
+.IP \[bu] 2
+Automatic startup support
+.SH FILES
+.TP
+.I ~/.local/share/clipkeeper/history.json
+Clipboard history data file
+.TP
+.I ~/.config/clipkeeper/
+Configuration directory
+.SH KEYBOARD SHORTCUTS
+.TP
+.B Ctrl+1-9
+Select clipboard entry 1-9
+.TP
+.B Ctrl+C
+Copy selected entry
+.TP
+.B Delete
+Delete selected entry
+.TP
+.B Ctrl+F
+Search clipboard history
+.TP
+.B Escape
+Close search or application
+.SH AUTHOR
+Daniel Nylander <daniel@danielnylander.se>
+.SH REPORTING BUGS
+Report bugs at: https://github.com/yeager/clipkeeper/issues
+.SH COPYRIGHT
+Copyright © 2024-2025 Daniel Nylander.
+License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.

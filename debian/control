@@ -1,0 +1,32 @@
+Source: clipkeeper
+Section: utils
+Priority: optional
+Maintainer: Daniel Nylander <daniel@danielnylander.se>
+Build-Depends: debhelper-compat (= 13),
+               dh-python,
+               python3-all,
+               python3-setuptools
+Standards-Version: 4.6.0
+Homepage: https://github.com/yeager/clipkeeper
+Vcs-Git: https://github.com/yeager/clipkeeper.git
+Vcs-Browser: https://github.com/yeager/clipkeeper
+
+Package: clipkeeper
+Architecture: all
+Depends: ${python3:Depends}, 
+         ${misc:Depends},
+         python3-gi,
+         gir1.2-gtk-4.0,
+         gir1.2-adw-1
+Description: GTK4 clipboard manager for Linux
+ ClipKeeper is a modern clipboard manager built with GTK4 and libadwaita.
+ It provides a clean interface to manage your clipboard history with features
+ like pinning important entries, searching, and keyboard shortcuts.
+ .
+ Features include:
+  * Clean, modern GTK4/Adwaita interface
+  * Clipboard history with search
+  * Pin important entries
+  * Keyboard shortcuts
+  * Command-line interface
+  * Automatic startup support

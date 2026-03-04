@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="clipboard-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#e8f4fd"/>
+      <stop offset="100%" style="stop-color:#a7d0e4"/>
+    </linearGradient>
+    <linearGradient id="paper-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff"/>
+      <stop offset="100%" style="stop-color:#f6f5f4"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Shadow -->
+  <ellipse cx="64" cy="118" rx="28" ry="8" fill="#00000020"/>
+  
+  <!-- Clipboard base -->
+  <rect x="24" y="16" width="80" height="96" rx="8" ry="8" 
+        fill="url(#clipboard-gradient)" stroke="#3d9970" stroke-width="2"/>
+  
+  <!-- Metal clip -->
+  <rect x="48" y="8" width="32" height="16" rx="4" ry="4" 
+        fill="#9a9996" stroke="#5e5c64" stroke-width="1"/>
+  <rect x="52" y="10" width="24" height="4" rx="2" ry="2" fill="#deddda"/>
+  <rect x="52" y="16" width="24" height="4" rx="2" ry="2" fill="#deddda"/>
+  
+  <!-- Paper sheets -->
+  <!-- Sheet 1 (back) -->
+  <rect x="32" y="32" width="64" height="72" rx="4" ry="4" 
+        fill="#c0bfbc" stroke="#77767b" stroke-width="0.5"/>
+  
+  <!-- Sheet 2 (middle) -->
+  <rect x="34" y="30" width="64" height="72" rx="4" ry="4" 
+        fill="#e6e6e6" stroke="#77767b" stroke-width="0.5"/>
+  
+  <!-- Sheet 3 (front) -->
+  <rect x="36" y="28" width="64" height="72" rx="4" ry="4" 
+        fill="url(#paper-gradient)" stroke="#9a9996" stroke-width="1"/>
+  
+  <!-- Text lines on front sheet -->
+  <line x1="44" y1="40" x2="88" y2="40" stroke="#c0bfbc" stroke-width="2"/>
+  <line x1="44" y1="48" x2="84" y2="48" stroke="#c0bfbc" stroke-width="2"/>
+  <line x1="44" y1="56" x2="92" y2="56" stroke="#c0bfbc" stroke-width="2"/>
+  <line x1="44" y1="64" x2="76" y2="64" stroke="#c0bfbc" stroke-width="2"/>
+  
+  <!-- Highlight/copy indicator -->
+  <rect x="44" y="72" width="48" height="8" rx="2" ry="2" 
+        fill="#3584e4" opacity="0.3"/>
+  <line x1="44" y1="76" x2="92" y2="76" stroke="#3584e4" stroke-width="2"/>
+  
+  <!-- Small copy symbols -->
+  <circle cx="84" cy="88" r="6" fill="#3584e4" opacity="0.8"/>
+  <path d="M81 88 L84 91 L89 85" stroke="white" stroke-width="2" 
+        stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>

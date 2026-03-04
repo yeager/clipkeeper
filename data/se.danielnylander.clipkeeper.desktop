@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Application
+Name=ClipKeeper
+GenericName=Clipboard Manager
+Comment=Keep track of your clipboard history
+Keywords=clipboard;copy;paste;history;manager;
+Icon=se.danielnylander.clipkeeper
+Exec=clipkeeper
+StartupWMClass=ClipKeeper
+Terminal=false
+Categories=GTK;Utility;
+StartupNotify=true
+X-GNOME-Autostart-enabled=false

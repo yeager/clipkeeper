@@ -1,0 +1,53 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "clipkeeper"
+version = "1.0.0"
+description = "GTK4 clipboard manager for Linux"
+readme = "README.md"
+license = {file = "LICENSE"}
+authors = [
+    {name = "Daniel Nylander", email = "daniel@danielnylander.se"}
+]
+maintainers = [
+    {name = "Daniel Nylander", email = "daniel@danielnylander.se"}
+]
+keywords = ["clipboard", "gtk4", "gnome", "adwaita", "linux"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: X11 Applications :: GTK",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Desktop Environment :: Gnome",
+    "Topic :: Utilities"
+]
+requires-python = ">=3.9"
+dependencies = [
+    "PyGObject>=3.42.0"
+]
+
+[project.urls]
+Homepage = "https://github.com/yeager/clipkeeper"
+Repository = "https://github.com/yeager/clipkeeper.git"
+Issues = "https://github.com/yeager/clipkeeper/issues"
+Changelog = "https://github.com/yeager/clipkeeper/blob/main/CHANGELOG.md"
+
+[project.scripts]
+clipkeeper = "clipkeeper.cli:main"
+
+[project.gui-scripts]
+clipkeeper-gui = "clipkeeper.application:main"
+
+[tool.setuptools.packages.find]
+include = ["clipkeeper*"]
+
+[tool.setuptools.package-data]
+clipkeeper = ["data/icons/*.svg", "data/ui/*.ui", "po/*.pot"]

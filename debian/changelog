@@ -1,3 +1,13 @@
+clipkeeper (0.2.0-1) unstable; urgency=medium
+
+  * Encrypt clipboard history with Fernet (AES-128-CBC + HMAC).
+  * Machine-derived key via PBKDF2 + /etc/machine-id.
+  * File permissions restricted to 0600.
+  * Auto-migrate old plaintext history.json.
+  * Falls back to XOR obfuscation without cryptography package.
+
+ -- Daniel Nylander <daniel@danielnylander.se>  Tue, 04 Mar 2026 14:15:00 +0100
+
 clipkeeper (0.1.1-1) unstable; urgency=medium
 
   * Add Swedish translation (100% complete).

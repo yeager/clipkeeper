@@ -19,7 +19,8 @@ from gi.repository import Gtk, Adw, Gdk, GLib, Gio
 
 from . import __version__, __app_id__, __author__, __email__
 from .clipboard_monitor import ClipboardMonitor
-from .clipboard_entry import ClipboardEntry, ClipboardType
+from .clipboard_entry import ClipboardEntry
+from .secure_storage import SecureStorage, ClipboardType
 from .preferences_window import PreferencesWindow
 from .shortcuts_window import ShortcutsWindow
 
@@ -45,6 +46,7 @@ class ClipKeeperApplication(Adw.Application):
         self.data_dir = Path.home() / '.local' / 'share' / 'clipkeeper'
         self.config_file = self.data_dir / 'config.json'
         self.history_file = self.data_dir / 'history.json'
+        self.secure_history = SecureStorage(self.data_dir / 'history.enc')
         
         # Default settings
         self.settings = {
@@ -225,29 +227,41 @@ class ClipKeeperApplication(Adw.Application):
             print(f"Error saving settings: {e}")
             
     def load_history(self):
-        """Load clipboard history from file."""
-        if self.history_file.exists():
+        """Load clipboard history from encrypted storage."""
+        # Try encrypted file first
+        data = self.secure_history.load()
+        if data is None and self.history_file.exists():
+            # Fallback: old plaintext JSON (auto-migrated on next save)
             try:
                 with open(self.history_file, 'r') as f:
                     data = json.load(f)
-                    
-                for item_data in data.get('entries', []):
+            except Exception:
+                data = None
+
+        if data:
+            for item_data in data.get('entries', []):
+                try:
                     entry = ClipboardEntry.from_dict(item_data)
                     self.entries.append(entry)
                     if entry.pinned:
                         self.pinned_entries.append(entry)
-                        
-            except Exception as e:
-                print(f"Error loading history: {e}")
-                
+                except Exception:
+                    continue
+
+            # If migrated from plaintext, remove old file
+            if self.history_file.exists():
+                try:
+                    self.history_file.unlink()
+                except Exception:
+                    pass
+
     def save_history(self):
-        """Save clipboard history to file."""
+        """Save clipboard history to encrypted storage."""
         try:
             data = {
                 'entries': [entry.to_dict() for entry in self.entries[:self.settings['max_history_size']]]
             }
-            with open(self.history_file, 'w') as f:
-                json.dump(data, f, indent=2)
+            self.secure_history.save(data)
         except Exception as e:
             print(f"Error saving history: {e}")
             

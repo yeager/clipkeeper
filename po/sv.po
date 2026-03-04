@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the clipkeeper package.
+# Copyright (C) YEAR Daniel Nylander
+# This file is distributed under the same license as the ClipKeeper package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: clipkeeper 0.1.0\n"
-"Report-Msgid-Bugs-To: daniel@danielnylander.se\n"
-"POT-Creation-Date: 2026-03-04 09:55+0100\n"
+"Project-Id-Version: ClipKeeper 0.2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-04 14:14+0100\n"
 "PO-Revision-Date: 2026-03-04 09:00+0000\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>, 2026\n"
 "Language-Team: Swedish (https://app.transifex.com/danielnylander/teams/305669/sv/)\n"
@@ -21,11 +21,11 @@ msgstr ""
 "Language: sv\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: clipkeeper/application.py:130
+#: clipkeeper/application.py:132
 msgid "Welcome to ClipKeeper"
 msgstr "Välkommen till ClipKeeper"
 
-#: clipkeeper/application.py:131
+#: clipkeeper/application.py:133
 msgid ""
 "ClipKeeper will monitor your clipboard and save your clipboard history for "
 "easy access. Use Ctrl+Shift+V to quickly access your clipboard history."
@@ -34,15 +34,15 @@ msgstr ""
 "för enkel åtkomst. Använd Ctrl+Shift+V för att snabbt komma åt din "
 "urklippshistorik."
 
-#: clipkeeper/application.py:135
+#: clipkeeper/application.py:137
 msgid "Welcome"
 msgstr "Välkommen"
 
-#: clipkeeper/application.py:318 clipkeeper/preferences_window.py:92
+#: clipkeeper/application.py:332 clipkeeper/preferences_window.py:92
 msgid "Clear Clipboard History"
 msgstr "Töm urklippshistorik"
 
-#: clipkeeper/application.py:319
+#: clipkeeper/application.py:333
 msgid ""
 "Are you sure you want to clear all clipboard history? Pinned entries will be"
 " kept."
@@ -50,11 +50,11 @@ msgstr ""
 "Är du säker på att du vill tömma all urklippshistorik? Nålade poster kommer "
 "att behållas."
 
-#: clipkeeper/application.py:320
+#: clipkeeper/application.py:334
 msgid "Cancel"
 msgstr "Avbryt"
 
-#: clipkeeper/application.py:321 clipkeeper/preferences_window.py:96
+#: clipkeeper/application.py:335 clipkeeper/preferences_window.py:96
 msgid "Clear"
 msgstr "Töm"
 
@@ -62,57 +62,57 @@ msgstr "Töm"
 msgid "Clear History"
 msgstr "Töm historik"
 
-#: clipkeeper/main_window.py:138
+#: clipkeeper/main_window.py:140
 msgid "Search clipboard history..."
 msgstr "Sök i urklippshistorik..."
 
-#: clipkeeper/main_window.py:200 clipkeeper/preferences_window.py:22
+#: clipkeeper/main_window.py:203 clipkeeper/preferences_window.py:22
 msgid "Preferences"
 msgstr "Inställningar"
 
-#: clipkeeper/main_window.py:201 clipkeeper/preferences_window.py:109
+#: clipkeeper/main_window.py:204 clipkeeper/preferences_window.py:109
 msgid "Keyboard Shortcuts"
 msgstr "Tangentbordsgenvägar"
 
-#: clipkeeper/main_window.py:202
+#: clipkeeper/main_window.py:205
 msgid "About ClipKeeper"
 msgstr "Om ClipKeeper"
 
-#: clipkeeper/main_window.py:242
+#: clipkeeper/main_window.py:245
 msgid "No Clipboard History"
 msgstr "Ingen urklippshistorik"
 
-#: clipkeeper/main_window.py:243
+#: clipkeeper/main_window.py:246
 msgid ""
 "Your clipboard history will appear here as you copy text and other content."
 msgstr ""
 "Din urklippshistorik kommer att visas här när du kopierar text och annat "
 "innehåll."
 
-#: clipkeeper/main_window.py:254
+#: clipkeeper/main_window.py:257
 msgid "No Results"
 msgstr "Inga resultat"
 
-#: clipkeeper/main_window.py:255
+#: clipkeeper/main_window.py:258
 msgid "Try a different search term."
 msgstr "Prova en annan sökterm."
 
-#: clipkeeper/main_window.py:270
+#: clipkeeper/main_window.py:273
 #, python-brace-format
 msgid "{} of {} entries"
 msgstr "{} av {} poster"
 
-#: clipkeeper/main_window.py:272
+#: clipkeeper/main_window.py:275
 #, python-brace-format
 msgid "{} entries"
 msgstr "{} poster"
 
-#: clipkeeper/main_window.py:275
+#: clipkeeper/main_window.py:278
 #, python-brace-format
 msgid ", {} pinned"
 msgstr ", {} nålade"
 
-#: clipkeeper/main_window.py:290
+#: clipkeeper/main_window.py:293
 msgid "Copied to clipboard"
 msgstr "Kopierades till urklipp"
 

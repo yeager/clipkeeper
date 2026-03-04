@@ -126,7 +126,9 @@ class MainWindow(Adw.ApplicationWindow):
         clear_button.connect("clicked", lambda *_: self.app.activate_action("clear-history"))
         header_bar.pack_end(clear_button)
         
-        self.set_titlebar(header_bar)
+        # Use ToolbarView for Adw.ApplicationWindow
+        toolbar_view = Adw.ToolbarView()
+        toolbar_view.add_top_bar(header_bar)
         
         # Main content
         main_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=0)
@@ -188,7 +190,8 @@ class MainWindow(Adw.ApplicationWindow):
         self.search_entry = search_entry
         self.search_bar = search_bar
         
-        self.set_content(main_box)
+        toolbar_view.set_content(main_box)
+        self.set_content(toolbar_view)
         
         # Update the view
         self.update_history_view()

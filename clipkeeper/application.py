@@ -20,7 +20,7 @@ from gi.repository import Gtk, Adw, Gdk, GLib, Gio
 from . import __version__, __app_id__, __author__, __email__
 from .clipboard_monitor import ClipboardMonitor
 from .clipboard_entry import ClipboardEntry
-from .secure_storage import SecureStorage, ClipboardType
+from .secure_storage import SecureStorage
 from .preferences_window import PreferencesWindow
 from .shortcuts_window import ShortcutsWindow
 

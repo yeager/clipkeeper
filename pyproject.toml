@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 optional-dependencies = {security = ["cryptography>=41.0"]}
 name = "clipkeeper"
-version = "0.2.0"
+version = "0.2.1"
 description = "GTK4 clipboard manager for Linux"
 readme = "README.md"
 license = {file = "LICENSE"}

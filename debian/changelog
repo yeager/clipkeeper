@@ -1,3 +1,9 @@
+clipkeeper (0.2.1-1) unstable; urgency=high
+
+  * Fix ImportError: removed stale ClipboardType import from secure_storage.
+
+ -- Daniel Nylander <daniel@danielnylander.se>  Tue, 04 Mar 2026 14:25:00 +0100
+
 clipkeeper (0.2.0-1) unstable; urgency=medium
 
   * Encrypt clipboard history with Fernet (AES-128-CBC + HMAC).

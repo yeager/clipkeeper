@@ -1,7 +1,7 @@
 %global pypi_name clipkeeper
 
 Name:           clipkeeper
-Version:        0.1.0
+Version:        0.1.1
 Release:        1%{?dist}
 Summary:        GTK4 clipboard manager for Linux
 

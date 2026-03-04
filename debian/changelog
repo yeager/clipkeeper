@@ -1,3 +1,9 @@
+clipkeeper (0.1.1-1) unstable; urgency=medium
+
+  * Add Swedish translation (100% complete).
+
+ -- Daniel Nylander <daniel@danielnylander.se>  Tue, 04 Mar 2026 10:55:00 +0100
+
 clipkeeper (0.1.0-1) unstable; urgency=medium
 
   * Initial release.

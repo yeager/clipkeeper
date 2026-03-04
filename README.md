@@ -2,6 +2,8 @@
 
 A modern GTK4/Adwaita clipboard manager for Linux that keeps track of your clipboard history.
 
+![ClipKeeper](screenshots/clipkeeper.png)
+
 ## Features
 
 **Clipboard History**
